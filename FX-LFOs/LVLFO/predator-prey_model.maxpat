@@ -97,8 +97,8 @@
 									"rnbo_classname" : "codebox",
 									"rnbo_extra_attributes" : 									{
 										"code" : "// Constants\r\nconst N_PREY = 3;\r\nconst N_PRED = 2;\r\n\r\n// Parameters\r\n@param alpha[N_PREY] = {0.1, 0.1, 0.1};   // prey birth rates\r\n@param gamma[N_PRED] = {0.1, 0.1};        // predator death rates\r\n\r\n// Interaction matrices\r\n@param beta[N_PREY][N_PRED] = {\r\n    {0.05, 0.02},\r\n    {0.04, 0.03},\r\n    {0.01, 0.04}\r\n}; // predation matrix\r\n\r\n@param delta[N_PREY][N_PRED] = {\r\n    {0.01, 0.02},\r\n    {0.015, 0.01},\r\n    {0.02, 0.005}\r\n}; // conversion matrix\r\n\r\n@param timestep = 0.1;\r\n@param resetThreshold = 0.01;\r\n@param maxSteps = 10000;\r\n\r\n// States\r\n@state prey[N_PREY] = {10.0, 10.0, 10.0};\r\n@state predator[N_PRED] = {5.0, 5.0};\r\n@state stepCounter = 0;\r\n\r\n// Output current populations (limited to 6 outputs)\r\nout1 = prey[0];\r\nout2 = prey[1];\r\nout3 = prey[2];\r\nout4 = predator[0];\r\nout5 = predator[1];\r\nout6 = stepCounter;\r\n\r\n// Local arrays\r\nfloat dp[N_PREY];\r\nfloat dd[N_PRED];\r\nfloat p[N_PREY];\r\nfloat d[N_PRED];\r\n\r\n// Copy current populations\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    p[i] = prey[i];\r\n    dp[i] = alpha[i] * p[i]; // start with growth term\r\n}\r\nfor (j = 0; j < N_PRED; j += 1) {\r\n    d[j] = predator[j];\r\n    dd[j] = -gamma[j] * d[j]; // start with death term\r\n}\r\n\r\n// Interaction terms\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    for (j = 0; j < N_PRED; j += 1) {\r\n        interaction = beta[i][j] * p[i] * d[j];\r\n        dp[i] -= interaction;\r\n        dd[j] += delta[i][j] * p[i] * d[j];\r\n    }\r\n}\r\n\r\n// Euler integration\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    p[i] += dp[i] * timestep;\r\n    p[i] = max(p[i], 0);\r\n    prey[i] = p[i];\r\n}\r\nfor (j = 0; j < N_PRED; j += 1) {\r\n    d[j] += dd[j] * timestep;\r\n    d[j] = max(d[j], 0);\r\n    predator[j] = d[j];\r\n}\r\n\r\nstepCounter += 1;\r\n\r\n// Reset if extinction or too many steps\r\nint reset = 0;\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    if\r\n",
-										"hot" : 0,
-										"safemath" : 1
+										"safemath" : 1,
+										"hot" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -356,11 +356,179 @@
 						}
 ,
 						"classnamespace" : "rnbo",
-						"rect" : [ 1130.0, 323.0, 1682.0, 1192.0 ],
+						"rect" : [ -81.0, 85.0, 1835.0, 1320.0 ],
 						"default_fontname" : "Lato",
 						"gridsize" : [ 15.0, 15.0 ],
 						"title" : "predator-prey_model",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 344.915262460708618, 1018.0, 37.0, 23.0 ],
+									"rnbo_classname" : "t",
+									"rnbo_serial" : 2,
+									"rnbo_uniqueid" : "t_obj-5",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"out1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"triggers" : 											{
+												"attrOrProp" : 2,
+												"digest" : "The number of arguments determines the number of outlets. \t\t\t\t\t\tEach outlet sends out either a whole number, float, bang or list, \t\t\t\t\t\tas identified by symbol arguments (i, f, b, l). \t\t\t\t\t\tIf there are no arguments, there are two outlets, both of which send a float.",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "list"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "input to distribute",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : "number",
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+ ],
+										"helpname" : "trigger",
+										"aliasOf" : "trigger",
+										"classname" : "t",
+										"operator" : 0,
+										"versionId" : -1133428571,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "t 127"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 4,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 344.915262460708618, 1058.47460150718689, 59.0, 23.0 ],
+									"rnbo_classname" : "ctlout",
+									"rnbo_serial" : 5,
+									"rnbo_uniqueid" : "ctlout_obj-4",
+									"text" : "ctlout 2 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 184.0, 50.0, 67.0, 23.0 ],
+									"rnbo_classname" : "loadmess",
+									"rnbo_serial" : 1,
+									"rnbo_uniqueid" : "loadmess_obj-3",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"input" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Bang to trigger message.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "bang"
+											}
+,
+											"message" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Message when patcher is loaded.",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "list",
+												"defaultValue" : ""
+											}
+,
+											"startupbang" : 											{
+												"attrOrProp" : 1,
+												"digest" : "startupbang",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "bang"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : "bang",
+												"digest" : "Bang to trigger message.",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "message",
+												"type" : "list",
+												"digest" : "Message when patcher is loaded.",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+ ],
+										"helpname" : "loadmess",
+										"aliasOf" : "loadmess",
+										"classname" : "loadmess",
+										"operator" : 0,
+										"versionId" : -361086158,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "loadmess 1"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-76",
 									"maxclass" : "newobj",
@@ -428,10 +596,10 @@
 									"patching_rect" : [ 1402.542406320571899, 926.271208524703979, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
-										"initialFormat" : "integer",
+										"maximum" : "<none>",
 										"order" : "",
+										"initialFormat" : "integer",
 										"preset" : 0
 									}
 ,
@@ -590,10 +758,10 @@
 									"patching_rect" : [ 1166.949180364608765, 926.271208524703979, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
-										"initialFormat" : "integer",
+										"maximum" : "<none>",
 										"order" : "",
+										"initialFormat" : "integer",
 										"preset" : 0
 									}
 ,
@@ -828,10 +996,10 @@
 									"patching_rect" : [ 924.576293230056763, 666.101710796356201, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
-										"initialFormat" : "integer",
+										"maximum" : "<none>",
 										"order" : "",
+										"initialFormat" : "integer",
 										"preset" : 0
 									}
 ,
@@ -849,10 +1017,6 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 956.076293230056763, 592.372895479202271, 23.0, 23.0 ],
 									"rnbo_classname" : "t",
-									"rnbo_extra_attributes" : 									{
-										"triggers" : ""
-									}
-,
 									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "t_obj-65",
 									"rnboinfo" : 									{
@@ -1176,8 +1340,8 @@
 									"patching_rect" : [ 714.40679669380188, 951.694937944412231, 36.0, 23.0 ],
 									"rnbo_classname" : "out",
 									"rnbo_extra_attributes" : 									{
-										"meta" : "",
-										"comment" : ""
+										"comment" : "",
+										"meta" : ""
 									}
 ,
 									"rnbo_serial" : 1,
@@ -1259,8 +1423,8 @@
 									"patching_rect" : [ 102.542375326156616, 936.94070029258728, 36.0, 23.0 ],
 									"rnbo_classname" : "out",
 									"rnbo_extra_attributes" : 									{
-										"meta" : "",
-										"comment" : ""
+										"comment" : "",
+										"meta" : ""
 									}
 ,
 									"rnbo_serial" : 2,
@@ -1363,10 +1527,10 @@
 									"patching_rect" : [ 899.152563810348511, 822.881375551223755, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
-										"initialFormat" : "float",
+										"maximum" : "<none>",
 										"order" : "",
+										"initialFormat" : "float",
 										"preset" : 0
 									}
 ,
@@ -1597,10 +1761,10 @@
 									"patching_rect" : [ 714.40679669380188, 749.152560234069824, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
-										"initialFormat" : "integer",
+										"maximum" : "<none>",
 										"order" : "",
+										"initialFormat" : "integer",
 										"preset" : 0
 									}
 ,
@@ -1621,10 +1785,10 @@
 									"patching_rect" : [ 102.542375326156616, 749.152560234069824, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
-										"initialFormat" : "integer",
+										"maximum" : "<none>",
 										"order" : "",
+										"initialFormat" : "integer",
 										"preset" : 0
 									}
 ,
@@ -1648,8 +1812,8 @@
 									"rnbo_classname" : "codebox",
 									"rnbo_extra_attributes" : 									{
 										"code" : "// Lotka-Volterra base model: 1 prey, 1 predator\r\n\r\n// Parameters with metadata\r\n@param({ min: 0.0, max: 1.0 }) alpha = 0.1;     // prey birth rate\r\n@param({ min: 0.0, max: 1.0 }) beta = 0.03;     // predation rate\r\n@param({ min: 0.0, max: 1.0 }) delta = 0.01;    // predator reproduction rate\r\n@param({ min: 0.0, max: 1.0 }) gamma = 0.1;     // predator death rate\r\n\r\n@param({ min: 0.001, max: 1.0 }) timestep = 0.1;\r\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\r\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\r\n\r\n// Persistent state variables\r\n@state prey = 10.0;\r\n@state predator = 5.0;\r\n@state stepCounter = 0.0;\r\n\r\n// Output current populations\r\nout1 = prey;\r\nout2 = predator;\r\n\r\n// Local variables\r\nx = prey;\r\ny = predator;\r\n\r\n// Lotka-Volterra equations\r\ndx = (alpha * x) - (beta * x * y);\r\ndy = (delta * x * y) - (gamma * y);\r\n\r\n\r\n// Euler integration\r\nx = x + (dx * timestep);\r\ny = y + (dy * timestep);\r\n\r\n\r\n// Clamp to avoid negative populations\r\nx = max(x, 0);\r\ny = max(y, 0);\r\n\r\n// Update states\r\nprey = x;\r\npredator = y;\r\nstepCounter = stepCounter + 1;\r\n\r\n\r\n// Check reset conditions\r\nif (x < resetThreshold || y < resetThreshold || stepCounter >= maxSteps) {\r\n    prey = 10;\r\n    predator = 5;\r\n    stepCounter = 0;\r\n}\r\n",
-										"hot" : 0,
-										"safemath" : 1
+										"safemath" : 1,
+										"hot" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -2224,6 +2388,20 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-19", 0 ],
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-71", 0 ],
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-46", 0 ],
 									"order" : 1,
 									"source" : [ "obj-40", 0 ]
@@ -2293,6 +2471,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"source" : [ "obj-5", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-58", 0 ],
 									"source" : [ "obj-50", 0 ]
 								}
@@ -2337,6 +2522,14 @@
 								"patchline" : 								{
 									"destination" : [ "obj-60", 0 ],
 									"source" : [ "obj-56", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"order" : 2,
+									"source" : [ "obj-58", 0 ]
 								}
 
 							}
@@ -2506,7 +2699,19 @@
 
 							}
  ],
-						"originid" : "pat-10"
+						"originid" : "pat-10",
+						"export_config" : 						{
+							"vst-au-export" : 							{
+								"vst-au-export-ins" : 								{
+									"plugin_manufacturer_name" : "ES Mediaworks LLC",
+									"plugin_manufacturer_code" : "ESMW",
+									"plugin_name" : "lvlfo"
+								}
+
+							}
+
+						}
+
 					}
 ,
 					"patching_rect" : [ 300.740730881690979, 307.407397329807281, 188.0, 22.0 ],

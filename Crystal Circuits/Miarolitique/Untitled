@@ -1,0 +1,121 @@
+/*
+crystal-inspired hex grid UI
+*/
+
+mgraphics.init();
+mgraphics.autofill = 0;
+mgraphics.relative_coords = 0;
+
+var val = 0;
+var numHexes = 19; // total number of hexes to draw
+var activeHexes = 0;
+var hexRadius = 20;
+var padding = 5;
+
+function paint() {
+	var width = mgraphics.size[0];
+	var height = mgraphics.size[1];
+	var centerX = width / 2;
+	var centerY = height / 2;
+
+	// Colors
+	var bgcolor = this.patcher.bgcolor;
+	var inactiveColor = this.patcher.elementcolor;
+	var activeColor = this.patcher.color;
+
+	mgraphics.set_source_rgba(bgcolor);
+	mgraphics.rectangle(0, 0, width, height);
+	mgraphics.fill();
+
+	// Determine how many hexes to light up
+	activeHexes = Math.floor(val * numHexes);
+
+	// Simple hex grid coordinates: center plus rings
+	var hexes = getHexGrid(centerX, centerY, hexRadius + padding);
+
+	for (var i = 0; i < hexes.length; i++) {
+		var hex = hexes[i];
+		mgraphics.new_path();
+		drawHex(hex[0], hex[1], hexRadius);
+		mgraphics.set_line_width(2);
+
+		if (i < activeHexes) {
+			mgraphics.set_source_rgba(activeColor);
+			mgraphics.fill_preserve();
+		} else {
+			mgraphics.set_source_rgba(inactiveColor);
+			mgraphics.stroke();
+		}
+	}
+}
+
+function drawHex(cx, cy, r) {
+	for (var i = 0; i < 6; i++) {
+		var angle = Math.PI / 3 * i;
+		var x = cx + r * Math.cos(angle);
+		var y = cy + r * Math.sin(angle);
+		if (i == 0) {
+			mgraphics.move_to(x, y);
+		} else {
+			mgraphics.line_to(x, y);
+		}
+	}
+	mgraphics.close_path();
+}
+
+function getHexGrid(cx, cy, spacing) {
+	// Returns coordinates for a simple 2-ring hex grid (19 hexes)
+	var coords = [[cx, cy]]; // center
+
+	var directions = [
+		[1, 0], [1, -1], [0, -1],
+		[-1, 0], [-1, 1], [0, 1]
+	];
+
+	// First ring (6 hexes)
+	for (var i = 0; i < 6; i++) {
+		var dx = directions[i][0];
+		var dy = directions[i][1];
+		coords.push(hexToPixel(cx, cy, dx, dy, spacing));
+	}
+
+	// Second ring (12 hexes)
+	for (var i = 0; i < 6; i++) {
+		var dx = directions[i][0];
+		var dy = directions[i][1];
+		var start = [dx * 2, dy * 2];
+		coords.push(hexToPixel(cx, cy, start[0], start[1], spacing));
+
+		// Offset between main directions
+		var next = directions[(i + 1) % 6];
+		coords.push(hexToPixel(cx, cy, dx + next[0], dy + next[1], spacing));
+	}
+
+	return coords;
+}
+
+function hexToPixel(cx, cy, q, r, spacing) {
+	var x = spacing * Math.sqrt(3) * (q + r / 2) + cx;
+	var y = spacing * 1.5 * r + cy;
+	return [x, y];
+}
+
+// Respond to float inputs
+function msg_float(v) {
+	val = Math.min(Math.max(0, v), 1);
+	notifyclients();
+	bang();
+}
+
+function setvalueof(v) {
+	msg_float(v);
+}
+
+function getvalueof() {
+	return val;
+}
+
+function bang() {
+	mgraphics.redraw();
+	outlet(0, val);
+}
