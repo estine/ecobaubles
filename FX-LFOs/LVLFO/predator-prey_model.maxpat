@@ -97,8 +97,8 @@
 									"rnbo_classname" : "codebox",
 									"rnbo_extra_attributes" : 									{
 										"code" : "// Constants\r\nconst N_PREY = 3;\r\nconst N_PRED = 2;\r\n\r\n// Parameters\r\n@param alpha[N_PREY] = {0.1, 0.1, 0.1};   // prey birth rates\r\n@param gamma[N_PRED] = {0.1, 0.1};        // predator death rates\r\n\r\n// Interaction matrices\r\n@param beta[N_PREY][N_PRED] = {\r\n    {0.05, 0.02},\r\n    {0.04, 0.03},\r\n    {0.01, 0.04}\r\n}; // predation matrix\r\n\r\n@param delta[N_PREY][N_PRED] = {\r\n    {0.01, 0.02},\r\n    {0.015, 0.01},\r\n    {0.02, 0.005}\r\n}; // conversion matrix\r\n\r\n@param timestep = 0.1;\r\n@param resetThreshold = 0.01;\r\n@param maxSteps = 10000;\r\n\r\n// States\r\n@state prey[N_PREY] = {10.0, 10.0, 10.0};\r\n@state predator[N_PRED] = {5.0, 5.0};\r\n@state stepCounter = 0;\r\n\r\n// Output current populations (limited to 6 outputs)\r\nout1 = prey[0];\r\nout2 = prey[1];\r\nout3 = prey[2];\r\nout4 = predator[0];\r\nout5 = predator[1];\r\nout6 = stepCounter;\r\n\r\n// Local arrays\r\nfloat dp[N_PREY];\r\nfloat dd[N_PRED];\r\nfloat p[N_PREY];\r\nfloat d[N_PRED];\r\n\r\n// Copy current populations\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    p[i] = prey[i];\r\n    dp[i] = alpha[i] * p[i]; // start with growth term\r\n}\r\nfor (j = 0; j < N_PRED; j += 1) {\r\n    d[j] = predator[j];\r\n    dd[j] = -gamma[j] * d[j]; // start with death term\r\n}\r\n\r\n// Interaction terms\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    for (j = 0; j < N_PRED; j += 1) {\r\n        interaction = beta[i][j] * p[i] * d[j];\r\n        dp[i] -= interaction;\r\n        dd[j] += delta[i][j] * p[i] * d[j];\r\n    }\r\n}\r\n\r\n// Euler integration\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    p[i] += dp[i] * timestep;\r\n    p[i] = max(p[i], 0);\r\n    prey[i] = p[i];\r\n}\r\nfor (j = 0; j < N_PRED; j += 1) {\r\n    d[j] += dd[j] * timestep;\r\n    d[j] = max(d[j], 0);\r\n    predator[j] = d[j];\r\n}\r\n\r\nstepCounter += 1;\r\n\r\n// Reset if extinction or too many steps\r\nint reset = 0;\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    if\r\n",
-										"safemath" : 1,
-										"hot" : 0
+										"hot" : 0,
+										"safemath" : 1
 									}
 ,
 									"rnbo_serial" : 1,
@@ -356,7 +356,7 @@
 						}
 ,
 						"classnamespace" : "rnbo",
-						"rect" : [ -81.0, 85.0, 1835.0, 1320.0 ],
+						"rect" : [ 964.0, 259.0, 1835.0, 1320.0 ],
 						"default_fontname" : "Lato",
 						"gridsize" : [ 15.0, 15.0 ],
 						"title" : "predator-prey_model",
@@ -369,7 +369,11 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 344.915262460708618, 1018.0, 37.0, 23.0 ],
 									"rnbo_classname" : "t",
-									"rnbo_serial" : 2,
+									"rnbo_extra_attributes" : 									{
+										"triggers" : ""
+									}
+,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "t_obj-5",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -439,7 +443,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 344.915262460708618, 1058.47460150718689, 59.0, 23.0 ],
 									"rnbo_classname" : "ctlout",
-									"rnbo_serial" : 5,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "ctlout_obj-4",
 									"text" : "ctlout 2 1"
 								}
@@ -598,9 +602,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"order" : "",
 										"initialFormat" : "integer",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
 									"rnbo_serial" : 1,
@@ -655,7 +659,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1486.440713405609131, 1058.47460150718689, 66.0, 23.0 ],
 									"rnbo_classname" : "ctlout",
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "ctlout_obj-83",
 									"text" : "ctlout 33 1"
 								}
@@ -670,7 +674,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1402.542406320571899, 1058.47460150718689, 59.0, 23.0 ],
 									"rnbo_classname" : "ctlout",
-									"rnbo_serial" : 2,
+									"rnbo_serial" : 3,
 									"rnbo_uniqueid" : "ctlout_obj-84",
 									"text" : "ctlout 1 1"
 								}
@@ -760,9 +764,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"order" : "",
 										"initialFormat" : "integer",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
 									"rnbo_serial" : 2,
@@ -817,7 +821,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1250.847487449645996, 1058.47460150718689, 66.0, 23.0 ],
 									"rnbo_classname" : "ctlout",
-									"rnbo_serial" : 3,
+									"rnbo_serial" : 4,
 									"rnbo_uniqueid" : "ctlout_obj-2",
 									"text" : "ctlout 32 1"
 								}
@@ -832,7 +836,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1166.949180364608765, 1058.47460150718689, 59.0, 23.0 ],
 									"rnbo_classname" : "ctlout",
-									"rnbo_serial" : 4,
+									"rnbo_serial" : 5,
 									"rnbo_uniqueid" : "ctlout_obj-73",
 									"text" : "ctlout 0 1"
 								}
@@ -972,15 +976,15 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1029.661041498184204, 666.101710796356201, 46.0, 23.0 ],
+									"patching_rect" : [ 1029.661041498184204, 666.101710796356201, 53.0, 23.0 ],
 									"rnbo_classname" : ">",
 									"rnbo_extra_attributes" : 									{
 										"hot" : 0
 									}
 ,
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 3,
 									"rnbo_uniqueid" : ">_obj-68",
-									"text" : "> 2000"
+									"text" : "> 10000"
 								}
 
 							}
@@ -998,9 +1002,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"order" : "",
 										"initialFormat" : "integer",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
 									"rnbo_serial" : 3,
@@ -1017,7 +1021,11 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 956.076293230056763, 592.372895479202271, 23.0, 23.0 ],
 									"rnbo_classname" : "t",
-									"rnbo_serial" : 1,
+									"rnbo_extra_attributes" : 									{
+										"triggers" : ""
+									}
+,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "t_obj-65",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -1529,9 +1537,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"order" : "",
 										"initialFormat" : "float",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
 									"rnbo_serial" : 4,
@@ -1763,9 +1771,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"order" : "",
 										"initialFormat" : "integer",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
 									"rnbo_serial" : 5,
@@ -1787,9 +1795,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"order" : "",
 										"initialFormat" : "integer",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
 									"rnbo_serial" : 6,
@@ -1799,7 +1807,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "// Lotka-Volterra base model: 1 prey, 1 predator\r\n\r\n// Parameters with metadata\r\n@param({ min: 0.0, max: 1.0 }) alpha = 0.1;     // prey birth rate\r\n@param({ min: 0.0, max: 1.0 }) beta = 0.03;     // predation rate\r\n@param({ min: 0.0, max: 1.0 }) delta = 0.01;    // predator reproduction rate\r\n@param({ min: 0.0, max: 1.0 }) gamma = 0.1;     // predator death rate\r\n\r\n@param({ min: 0.001, max: 1.0 }) timestep = 0.1;\r\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\r\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\r\n\r\n// Persistent state variables\r\n@state prey = 10.0;\r\n@state predator = 5.0;\r\n@state stepCounter = 0.0;\r\n\r\n// Output current populations\r\nout1 = prey;\r\nout2 = predator;\r\n\r\n// Local variables\r\nx = prey;\r\ny = predator;\r\n\r\n// Lotka-Volterra equations\r\ndx = (alpha * x) - (beta * x * y);\r\ndy = (delta * x * y) - (gamma * y);\r\n\r\n\r\n// Euler integration\r\nx = x + (dx * timestep);\r\ny = y + (dy * timestep);\r\n\r\n\r\n// Clamp to avoid negative populations\r\nx = max(x, 0);\r\ny = max(y, 0);\r\n\r\n// Update states\r\nprey = x;\r\npredator = y;\r\nstepCounter = stepCounter + 1;\r\n\r\n\r\n// Check reset conditions\r\nif (x < resetThreshold || y < resetThreshold || stepCounter >= maxSteps) {\r\n    prey = 10;\r\n    predator = 5;\r\n    stepCounter = 0;\r\n}\r\n",
+									"code" : "// Lotka-Volterra base model: 1 prey, 1 predator\r\n\r\n// Parameters with metadata\r\n@param({ min: 0.0, max: 1.0 }) alpha = 0.1;     // prey birth rate\r\n@param({ min: 0.0, max: 1.0 }) beta = 0.03;     // predation rate\r\n@param({ min: 0.0, max: 1.0 }) delta = 0.01;    // predator reproduction rate\r\n@param({ min: 0.0, max: 1.0 }) gamma = 0.1;     // predator death rate\r\n\t\r\n@param({ min: 0.0, max: 1 }) radiation = 0.001;\r\n\r\n@param({ min: 0.001, max: 1.0 }) timestep = 0.1;\r\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\r\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\r\n\r\n// Persistent state variables\r\n@state prey = 10.0;\r\n@state predator = 5.0;\r\n@state stepCounter = 0.0;\r\n\r\n// Output current populations\r\nout1 = prey;\r\nout2 = predator;\r\n\r\n// Local variables\r\nx = prey;\r\ny = predator;\r\n\r\n// Lotka-Volterra equations\r\ndx = (alpha * x) - (beta * x * y);\r\ndy = (delta * x * y) - (gamma * y);\r\n\r\n\r\n// Euler integration\r\nx = x + (dx * timestep);\r\ny = y + (dy * timestep);\r\n\r\n\r\n// Clamp to avoid negative populations\r\nx = max(x - radiation, 0);\r\ny = max(y - radiation, 0);\r\n\r\n// Update states\r\nprey = x;\r\npredator = y;\r\nstepCounter = stepCounter + 1;\r\n\r\n\r\n// Check reset conditions\r\nif (x < resetThreshold || y < resetThreshold || stepCounter >= maxSteps) {\r\n    prey = 10;\r\n    predator = 5;\r\n    stepCounter = 0;\r\n}\r\n",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -1811,12 +1819,12 @@
 									"patching_rect" : [ 102.542375326156616, 169.49152946472168, 631.355947256088257, 560.169504880905151 ],
 									"rnbo_classname" : "codebox",
 									"rnbo_extra_attributes" : 									{
-										"code" : "// Lotka-Volterra base model: 1 prey, 1 predator\r\n\r\n// Parameters with metadata\r\n@param({ min: 0.0, max: 1.0 }) alpha = 0.1;     // prey birth rate\r\n@param({ min: 0.0, max: 1.0 }) beta = 0.03;     // predation rate\r\n@param({ min: 0.0, max: 1.0 }) delta = 0.01;    // predator reproduction rate\r\n@param({ min: 0.0, max: 1.0 }) gamma = 0.1;     // predator death rate\r\n\r\n@param({ min: 0.001, max: 1.0 }) timestep = 0.1;\r\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\r\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\r\n\r\n// Persistent state variables\r\n@state prey = 10.0;\r\n@state predator = 5.0;\r\n@state stepCounter = 0.0;\r\n\r\n// Output current populations\r\nout1 = prey;\r\nout2 = predator;\r\n\r\n// Local variables\r\nx = prey;\r\ny = predator;\r\n\r\n// Lotka-Volterra equations\r\ndx = (alpha * x) - (beta * x * y);\r\ndy = (delta * x * y) - (gamma * y);\r\n\r\n\r\n// Euler integration\r\nx = x + (dx * timestep);\r\ny = y + (dy * timestep);\r\n\r\n\r\n// Clamp to avoid negative populations\r\nx = max(x, 0);\r\ny = max(y, 0);\r\n\r\n// Update states\r\nprey = x;\r\npredator = y;\r\nstepCounter = stepCounter + 1;\r\n\r\n\r\n// Check reset conditions\r\nif (x < resetThreshold || y < resetThreshold || stepCounter >= maxSteps) {\r\n    prey = 10;\r\n    predator = 5;\r\n    stepCounter = 0;\r\n}\r\n",
-										"safemath" : 1,
-										"hot" : 0
+										"code" : "// Lotka-Volterra base model: 1 prey, 1 predator\r\n\r\n// Parameters with metadata\r\n@param({ min: 0.0, max: 1.0 }) alpha = 0.1;     // prey birth rate\r\n@param({ min: 0.0, max: 1.0 }) beta = 0.03;     // predation rate\r\n@param({ min: 0.0, max: 1.0 }) delta = 0.01;    // predator reproduction rate\r\n@param({ min: 0.0, max: 1.0 }) gamma = 0.1;     // predator death rate\r\n\t\r\n@param({ min: 0.0, max: 1 }) radiation = 0.001;\r\n\r\n@param({ min: 0.001, max: 1.0 }) timestep = 0.1;\r\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\r\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\r\n\r\n// Persistent state variables\r\n@state prey = 10.0;\r\n@state predator = 5.0;\r\n@state stepCounter = 0.0;\r\n\r\n// Output current populations\r\nout1 = prey;\r\nout2 = predator;\r\n\r\n// Local variables\r\nx = prey;\r\ny = predator;\r\n\r\n// Lotka-Volterra equations\r\ndx = (alpha * x) - (beta * x * y);\r\ndy = (delta * x * y) - (gamma * y);\r\n\r\n\r\n// Euler integration\r\nx = x + (dx * timestep);\r\ny = y + (dy * timestep);\r\n\r\n\r\n// Clamp to avoid negative populations\r\nx = max(x - radiation, 0);\r\ny = max(y - radiation, 0);\r\n\r\n// Update states\r\nprey = x;\r\npredator = y;\r\nstepCounter = stepCounter + 1;\r\n\r\n\r\n// Check reset conditions\r\nif (x < resetThreshold || y < resetThreshold || stepCounter >= maxSteps) {\r\n    prey = 10;\r\n    predator = 5;\r\n    stepCounter = 0;\r\n}\r\n",
+										"hot" : 0,
+										"safemath" : 1
 									}
 ,
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 4,
 									"rnbo_uniqueid" : "codebox_obj-1",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -1908,6 +1916,19 @@
 												"deprecated" : 0,
 												"type" : "number",
 												"defaultValue" : "0.1"
+											}
+,
+											"radiation" : 											{
+												"attrOrProp" : 1,
+												"digest" : "radiation",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0.001"
 											}
 ,
 											"timestep" : 											{
@@ -2047,8 +2068,8 @@
 									"patching_rect" : [ 102.222218871116638, 39.259257972240448, 24.0, 24.0 ],
 									"rnbo_classname" : "toggle",
 									"rnbo_extra_attributes" : 									{
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
 									"rnbo_serial" : 1,
