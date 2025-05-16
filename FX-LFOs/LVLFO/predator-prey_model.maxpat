@@ -429,7 +429,7 @@
 											}
  ],
 										"lines" : [  ],
-										"originid" : "pat-34"
+										"originid" : "pat-74"
 									}
 ,
 									"patching_rect" : [ 286.0, 93.0, 308.0, 22.0 ],
@@ -2939,7 +2939,7 @@
 
 											}
  ],
-										"originid" : "pat-36",
+										"originid" : "pat-76",
 										"export_config" : 										{
 											"vst-au-export" : 											{
 												"vst-au-export-ins" : 												{
@@ -3040,7 +3040,7 @@
 
 							}
  ],
-						"originid" : "pat-32"
+						"originid" : "pat-72"
 					}
 ,
 					"patching_rect" : [ 283.0, 181.0, 35.0, 22.0 ],
@@ -3118,7 +3118,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 173.0, 141.0, 56.0, 23.0 ],
 									"rnbo_classname" : "loadbang",
-									"rnbo_serial" : 2,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "loadbang_obj-40",
 									"text" : "loadbang"
 								}
@@ -3134,7 +3134,7 @@
 									"parameter_enable" : 0,
 									"patching_rect" : [ 173.0, 182.0, 24.0, 24.0 ],
 									"rnbo_classname" : "button",
-									"rnbo_serial" : 2,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "button_obj-28"
 								}
 
@@ -3157,7 +3157,7 @@
 										"order" : ""
 									}
 ,
-									"rnbo_serial" : 5,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "number_obj-24"
 								}
 
@@ -3180,7 +3180,7 @@
 										"order" : ""
 									}
 ,
-									"rnbo_serial" : 6,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "number_obj-21"
 								}
 
@@ -3198,7 +3198,7 @@
 										"hot" : 0
 									}
 ,
-									"rnbo_serial" : 2,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "/_obj-20",
 									"text" : "/"
 								}
@@ -3213,7 +3213,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 173.0, 214.0, 67.0, 23.0 ],
 									"rnbo_classname" : "samplerate",
-									"rnbo_serial" : 2,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "samplerate_obj-19",
 									"text" : "samplerate"
 								}
@@ -3237,7 +3237,7 @@
 										"order" : ""
 									}
 ,
-									"rnbo_serial" : 7,
+									"rnbo_serial" : 3,
 									"rnbo_uniqueid" : "number_obj-16"
 								}
 
@@ -3260,7 +3260,7 @@
 										"order" : ""
 									}
 ,
-									"rnbo_serial" : 8,
+									"rnbo_serial" : 4,
 									"rnbo_uniqueid" : "number_obj-9"
 								}
 
@@ -3278,7 +3278,7 @@
 										"meta" : ""
 									}
 ,
-									"rnbo_serial" : 6,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "out~_obj-6",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -3374,7 +3374,7 @@
 										"meta" : ""
 									}
 ,
-									"rnbo_serial" : 7,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "out~_obj-5",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -3470,7 +3470,7 @@
 										"meta" : ""
 									}
 ,
-									"rnbo_serial" : 8,
+									"rnbo_serial" : 3,
 									"rnbo_uniqueid" : "out~_obj-4",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -3566,7 +3566,7 @@
 										"meta" : ""
 									}
 ,
-									"rnbo_serial" : 9,
+									"rnbo_serial" : 4,
 									"rnbo_uniqueid" : "out~_obj-3",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -3662,7 +3662,7 @@
 										"meta" : ""
 									}
 ,
-									"rnbo_serial" : 10,
+									"rnbo_serial" : 5,
 									"rnbo_uniqueid" : "out~_obj-2",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -3764,7 +3764,7 @@
 										"expr" : ""
 									}
 ,
-									"rnbo_serial" : 5,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "codebox~_obj-1",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4245,7 +4245,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 134.0, 324.0, 73.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 28,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "set_obj-10",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4302,7 +4302,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 339.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 29,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "set_obj-7",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4359,7 +4359,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 234.0, 148.0, 74.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 30,
+									"rnbo_serial" : 3,
 									"rnbo_uniqueid" : "set_obj-14",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4416,7 +4416,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 408.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 31,
+									"rnbo_serial" : 4,
 									"rnbo_uniqueid" : "set_obj-8",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4473,7 +4473,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 478.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 32,
+									"rnbo_serial" : 5,
 									"rnbo_uniqueid" : "set_obj-11",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4530,7 +4530,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 540.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 33,
+									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "set_obj-12",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4587,7 +4587,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 655.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 34,
+									"rnbo_serial" : 7,
 									"rnbo_uniqueid" : "set_obj-13",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4644,7 +4644,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 720.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 35,
+									"rnbo_serial" : 8,
 									"rnbo_uniqueid" : "set_obj-17",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4701,7 +4701,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 789.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 36,
+									"rnbo_serial" : 9,
 									"rnbo_uniqueid" : "set_obj-18",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4758,7 +4758,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 859.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 37,
+									"rnbo_serial" : 10,
 									"rnbo_uniqueid" : "set_obj-22",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4815,7 +4815,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 952.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 38,
+									"rnbo_serial" : 11,
 									"rnbo_uniqueid" : "set_obj-23",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4872,7 +4872,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1016.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 39,
+									"rnbo_serial" : 12,
 									"rnbo_uniqueid" : "set_obj-25",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4929,7 +4929,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1084.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 40,
+									"rnbo_serial" : 13,
 									"rnbo_uniqueid" : "set_obj-26",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4986,7 +4986,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1151.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 41,
+									"rnbo_serial" : 14,
 									"rnbo_uniqueid" : "set_obj-27",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5043,7 +5043,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1231.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 42,
+									"rnbo_serial" : 15,
 									"rnbo_uniqueid" : "set_obj-29",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5100,7 +5100,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1297.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 43,
+									"rnbo_serial" : 16,
 									"rnbo_uniqueid" : "set_obj-30",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5157,7 +5157,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1361.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 44,
+									"rnbo_serial" : 17,
 									"rnbo_uniqueid" : "set_obj-31",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5214,7 +5214,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1423.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 45,
+									"rnbo_serial" : 18,
 									"rnbo_uniqueid" : "set_obj-32",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5271,7 +5271,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1050.0, 389.0, 78.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 46,
+									"rnbo_serial" : 19,
 									"rnbo_uniqueid" : "set_obj-33",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5328,7 +5328,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 413.0, 158.0, 39.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 47,
+									"rnbo_serial" : 20,
 									"rnbo_uniqueid" : "set_obj-35",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5385,7 +5385,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 471.0, 158.0, 39.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 48,
+									"rnbo_serial" : 21,
 									"rnbo_uniqueid" : "set_obj-36",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5442,7 +5442,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 525.0, 158.0, 39.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 49,
+									"rnbo_serial" : 22,
 									"rnbo_uniqueid" : "set_obj-37",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5499,7 +5499,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 583.0, 158.0, 39.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 50,
+									"rnbo_serial" : 23,
 									"rnbo_uniqueid" : "set_obj-38",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5556,7 +5556,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1142.0, 389.0, 105.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 51,
+									"rnbo_serial" : 24,
 									"rnbo_uniqueid" : "set_obj-39",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5867,7 +5867,7 @@
 
 							}
  ],
-						"originid" : "pat-38"
+						"originid" : "pat-78"
 					}
 ,
 					"patching_rect" : [ 797.0, 341.0, 168.0, 22.0 ],
@@ -6051,7 +6051,7 @@
 						}
 ,
 						"classnamespace" : "rnbo",
-						"rect" : [ 254.0, 99.0, 1041.0, 735.0 ],
+						"rect" : [ 254.0, 99.0, 1306.0, 956.0 ],
 						"default_fontname" : "Lato",
 						"gridsize" : [ 15.0, 15.0 ],
 						"title" : "lvlfo",
@@ -6827,7 +6827,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "// Lotka-Volterra base model: 1 prey, 1 predator\r\n\r\n// Parameters with metadata\r\n@param({ min: 0.0, max: 1.0 }) alpha = 0.1;     // prey birth rate\r\n@param({ min: 0.0, max: 1.0 }) beta = 0.03;     // predation rate\r\n@param({ min: 0.0, max: 1.0 }) delta = 0.01;    // predator reproduction rate\r\n@param({ min: 0.0, max: 1.0 }) gamma = 0.1;     // predator death rate\r\n\t\r\n@param({ min: 0.0, max: 1 }) radiation = 0.001;\r\n\r\n@param({ min: 0.001, max: 1.0 }) timestep = 0.01;\r\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\r\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\r\n\r\n// Persistent state variables\r\n@state prey = 10.0;\r\n@state predator = 5.0;\r\n@state stepCounter = 0.0;\r\n\r\n@state alphaDev = 0;\r\n\r\n// Output current populations\r\nout1 = prey;\r\nout2 = predator;\r\n\r\n// Local variables\r\nx = prey;\r\ny = predator;\r\n\r\n// Lotka-Volterra equations\r\ndx = (alphaDev * x) - (beta * x * y);\r\ndy = (delta * x * y) - (gamma * y);\r\n\r\n\r\n// Euler integration\r\nx = x + (dx * timestep);\r\ny = y + (dy * timestep);\r\n\r\n\r\n// Clamp to avoid negative populations\r\nx = max(x - radiation, 0);\r\ny = max(y - radiation, 0);\r\n\r\n// Update states\r\nprey = x;\r\npredator = y;\r\nstepCounter = stepCounter + timestep;\r\n\r\nout3 = 0;\r\n\r\n\r\n// Check reset conditions\r\nif (x < resetThreshold || y < resetThreshold || stepCounter >= maxSteps) {\r\n    prey = 10;\r\n    predator = 5;\r\n    stepCounter = 0;\r\n\r\n\talphaDev = alpha + random(-0.1, 0.1);\r\n\r\n\tout3 = 1;\r\n}\r\n",
+									"code" : "// Lotka-Volterra base model: 1 prey, 1 predator\r\n\r\n// Parameters with metadata\r\n@param({ min: 0.0, max: 1.0 }) alpha = 0.1;     // prey birth rate\r\n@param({ min: 0.0, max: 1.0 }) beta = 0.03;     // predation rate\r\n@param({ min: 0.0, max: 1.0 }) delta = 0.01;    // predator reproduction rate\r\n@param({ min: 0.0, max: 1.0 }) gamma = 0.1;     // predator death rate\r\n\t\r\n@param({ min: 0.0, max: 1 }) radiation = 0.001;\r\n\r\n@param({ min: 0.001, max: 1.0 }) timestep = 0.01;\r\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\r\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\r\n\r\n// Persistent state variables\r\n@state prey = 10.0;\r\n@state predator = 5.0;\r\n@state stepCounter = 0.0;\r\n\r\n@state alphaDev = 0;\r\n\r\n// Output current populations\r\nout1 = prey;\r\nout2 = predator;\r\n\r\n// Local variables\r\nx = prey;\r\ny = predator;\r\n\r\n// Lotka-Volterra equations\r\ndx = (alphaDev * x) - (beta * x * y);\r\ndy = (delta * x * y) - (gamma * y);\r\n\r\n\r\n// Euler integration\r\nx = x + (dx * timestep);\r\ny = y + (dy * timestep);\r\n\r\n\r\n// Clamp to avoid negative populations\r\nx = max(x - radiation, 0);\r\ny = max(y - radiation, 0);\r\n\r\n// Update states\r\nprey = x;\r\npredator = y;\r\nstepCounter = stepCounter + timestep;\r\n\r\nout3 = 0;\r\n\r\n// Check reset conditions\r\nif (x < resetThreshold || y < resetThreshold || stepCounter >= maxSteps) {\r\n    prey = 10;\r\n    predator = 5;\r\n    stepCounter = 0;\r\n\r\n\talphaDev = alpha + random(-0.1, 0.1);\r\n\r\n\tout3 = 1;\r\n}\r\n",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -6839,12 +6839,12 @@
 									"patching_rect" : [ 100.000002980232239, 358.666677355766296, 896.0, 471.0 ],
 									"rnbo_classname" : "codebox~",
 									"rnbo_extra_attributes" : 									{
-										"code" : "// Lotka-Volterra base model: 1 prey, 1 predator\r\n\r\n// Parameters with metadata\r\n@param({ min: 0.0, max: 1.0 }) alpha = 0.1;     // prey birth rate\r\n@param({ min: 0.0, max: 1.0 }) beta = 0.03;     // predation rate\r\n@param({ min: 0.0, max: 1.0 }) delta = 0.01;    // predator reproduction rate\r\n@param({ min: 0.0, max: 1.0 }) gamma = 0.1;     // predator death rate\r\n\t\r\n@param({ min: 0.0, max: 1 }) radiation = 0.001;\r\n\r\n@param({ min: 0.001, max: 1.0 }) timestep = 0.01;\r\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\r\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\r\n\r\n// Persistent state variables\r\n@state prey = 10.0;\r\n@state predator = 5.0;\r\n@state stepCounter = 0.0;\r\n\r\n@state alphaDev = 0;\r\n\r\n// Output current populations\r\nout1 = prey;\r\nout2 = predator;\r\n\r\n// Local variables\r\nx = prey;\r\ny = predator;\r\n\r\n// Lotka-Volterra equations\r\ndx = (alphaDev * x) - (beta * x * y);\r\ndy = (delta * x * y) - (gamma * y);\r\n\r\n\r\n// Euler integration\r\nx = x + (dx * timestep);\r\ny = y + (dy * timestep);\r\n\r\n\r\n// Clamp to avoid negative populations\r\nx = max(x - radiation, 0);\r\ny = max(y - radiation, 0);\r\n\r\n// Update states\r\nprey = x;\r\npredator = y;\r\nstepCounter = stepCounter + timestep;\r\n\r\nout3 = 0;\r\n\r\n\r\n// Check reset conditions\r\nif (x < resetThreshold || y < resetThreshold || stepCounter >= maxSteps) {\r\n    prey = 10;\r\n    predator = 5;\r\n    stepCounter = 0;\r\n\r\n\talphaDev = alpha + random(-0.1, 0.1);\r\n\r\n\tout3 = 1;\r\n}\r\n",
+										"code" : "// Lotka-Volterra base model: 1 prey, 1 predator\r\n\r\n// Parameters with metadata\r\n@param({ min: 0.0, max: 1.0 }) alpha = 0.1;     // prey birth rate\r\n@param({ min: 0.0, max: 1.0 }) beta = 0.03;     // predation rate\r\n@param({ min: 0.0, max: 1.0 }) delta = 0.01;    // predator reproduction rate\r\n@param({ min: 0.0, max: 1.0 }) gamma = 0.1;     // predator death rate\r\n\t\r\n@param({ min: 0.0, max: 1 }) radiation = 0.001;\r\n\r\n@param({ min: 0.001, max: 1.0 }) timestep = 0.01;\r\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\r\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\r\n\r\n// Persistent state variables\r\n@state prey = 10.0;\r\n@state predator = 5.0;\r\n@state stepCounter = 0.0;\r\n\r\n@state alphaDev = 0;\r\n\r\n// Output current populations\r\nout1 = prey;\r\nout2 = predator;\r\n\r\n// Local variables\r\nx = prey;\r\ny = predator;\r\n\r\n// Lotka-Volterra equations\r\ndx = (alphaDev * x) - (beta * x * y);\r\ndy = (delta * x * y) - (gamma * y);\r\n\r\n\r\n// Euler integration\r\nx = x + (dx * timestep);\r\ny = y + (dy * timestep);\r\n\r\n\r\n// Clamp to avoid negative populations\r\nx = max(x - radiation, 0);\r\ny = max(y - radiation, 0);\r\n\r\n// Update states\r\nprey = x;\r\npredator = y;\r\nstepCounter = stepCounter + timestep;\r\n\r\nout3 = 0;\r\n\r\n// Check reset conditions\r\nif (x < resetThreshold || y < resetThreshold || stepCounter >= maxSteps) {\r\n    prey = 10;\r\n    predator = 5;\r\n    stepCounter = 0;\r\n\r\n\talphaDev = alpha + random(-0.1, 0.1);\r\n\r\n\tout3 = 1;\r\n}\r\n",
 										"safemath" : 1,
 										"expr" : ""
 									}
 ,
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "codebox~_obj-1",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -7592,7 +7592,7 @@
 
 							}
  ],
-						"originid" : "pat-40"
+						"originid" : "pat-80"
 					}
 ,
 					"patching_rect" : [ 283.0, 299.0, 98.0, 22.0 ],
@@ -7889,7 +7889,7 @@
 
 			}
  ],
-		"originid" : "pat-6",
+		"originid" : "pat-46",
 		"parameters" : 		{
 			"obj-13" : [ "rnbo~[3]", "rnbo~[2]", 0 ],
 			"obj-14::obj-1" : [ "rnbo~", "rnbo~", 0 ],
