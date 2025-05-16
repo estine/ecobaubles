@@ -10,9 +10,69 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 385.0, 99.0, 1315.0, 806.0 ],
+		"rect" : [ 256.0, 207.0, 1913.0, 1010.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 797.0, 228.0, 150.0, 34.0 ],
+					"text" : "Insert wonderful, usable GUI here"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "float", "float", "float", "float" ],
+					"patching_rect" : [ 840.5, 685.0, 74.0, 22.0 ],
+					"text" : "unpack f f f f"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 840.5, 657.0, 141.0, 22.0 ],
+					"text" : "loadmess -1 -0.33 0.33 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1231.0, 304.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1156.0, 304.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"format" : 6,
 					"id" : "obj-29",
@@ -21,7 +81,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1051.0, 638.0, 50.0, 22.0 ]
+					"patching_rect" : [ 1061.0, 768.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -32,7 +92,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 1051.0, 689.0, 50.5, 22.0 ],
+					"patching_rect" : [ 1050.0, 819.0, 50.5, 22.0 ],
 					"text" : "pan2"
 				}
 
@@ -46,7 +106,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 972.25, 638.0, 50.0, 22.0 ]
+					"patching_rect" : [ 982.0, 768.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -57,7 +117,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 972.0, 689.0, 50.5, 22.0 ],
+					"patching_rect" : [ 971.0, 819.0, 50.5, 22.0 ],
 					"text" : "pan2"
 				}
 
@@ -71,7 +131,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 876.75, 638.0, 50.0, 22.0 ]
+					"patching_rect" : [ 886.0, 768.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -82,7 +142,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 876.5, 689.0, 50.5, 22.0 ],
+					"patching_rect" : [ 876.0, 819.0, 50.5, 22.0 ],
 					"text" : "pan2"
 				}
 
@@ -96,7 +156,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 813.5, 638.0, 50.0, 22.0 ]
+					"patching_rect" : [ 813.0, 768.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -107,24 +167,28 @@
 					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 803.0, 689.0, 50.5, 22.0 ],
+					"patching_rect" : [ 802.0, 819.0, 50.5, 22.0 ],
 					"text" : "pan2"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bufsize" : 64,
+					"calccount" : 64,
 					"id" : "obj-19",
 					"maxclass" : "scope~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1417.0, 468.0, 130.0, 130.0 ],
+					"patching_rect" : [ 1429.0, 468.0, 130.0, 130.0 ],
 					"range" : [ 0.0, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bufsize" : 64,
+					"calccount" : 64,
 					"id" : "obj-18",
 					"maxclass" : "scope~",
 					"numinlets" : 2,
@@ -136,6 +200,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bufsize" : 64,
+					"calccount" : 64,
 					"id" : "obj-17",
 					"maxclass" : "scope~",
 					"numinlets" : 2,
@@ -147,6 +213,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bufsize" : 64,
+					"calccount" : 64,
 					"id" : "obj-15",
 					"maxclass" : "scope~",
 					"numinlets" : 2,
@@ -158,6 +226,8 @@
 			}
 , 			{
 				"box" : 				{
+					"bufsize" : 64,
+					"calccount" : 64,
 					"id" : "obj-16",
 					"maxclass" : "scope~",
 					"numinlets" : 2,
@@ -243,8 +313,8 @@
 													"rnbo_classname" : "codebox",
 													"rnbo_extra_attributes" : 													{
 														"code" : "// Constants\r\nconst N_PREY = 3;\r\nconst N_PRED = 2;\r\n\r\n// Parameters\r\n@param alpha[N_PREY] = {0.1, 0.1, 0.1};   // prey birth rates\r\n@param gamma[N_PRED] = {0.1, 0.1};        // predator death rates\r\n\r\n// Interaction matrices\r\n@param beta[N_PREY][N_PRED] = {\r\n    {0.05, 0.02},\r\n    {0.04, 0.03},\r\n    {0.01, 0.04}\r\n}; // predation matrix\r\n\r\n@param delta[N_PREY][N_PRED] = {\r\n    {0.01, 0.02},\r\n    {0.015, 0.01},\r\n    {0.02, 0.005}\r\n}; // conversion matrix\r\n\r\n@param timestep = 0.1;\r\n@param resetThreshold = 0.01;\r\n@param maxSteps = 10000;\r\n\r\n// States\r\n@state prey[N_PREY] = {10.0, 10.0, 10.0};\r\n@state predator[N_PRED] = {5.0, 5.0};\r\n@state stepCounter = 0;\r\n\r\n// Output current populations (limited to 6 outputs)\r\nout1 = prey[0];\r\nout2 = prey[1];\r\nout3 = prey[2];\r\nout4 = predator[0];\r\nout5 = predator[1];\r\nout6 = stepCounter;\r\n\r\n// Local arrays\r\nfloat dp[N_PREY];\r\nfloat dd[N_PRED];\r\nfloat p[N_PREY];\r\nfloat d[N_PRED];\r\n\r\n// Copy current populations\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    p[i] = prey[i];\r\n    dp[i] = alpha[i] * p[i]; // start with growth term\r\n}\r\nfor (j = 0; j < N_PRED; j += 1) {\r\n    d[j] = predator[j];\r\n    dd[j] = -gamma[j] * d[j]; // start with death term\r\n}\r\n\r\n// Interaction terms\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    for (j = 0; j < N_PRED; j += 1) {\r\n        interaction = beta[i][j] * p[i] * d[j];\r\n        dp[i] -= interaction;\r\n        dd[j] += delta[i][j] * p[i] * d[j];\r\n    }\r\n}\r\n\r\n// Euler integration\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    p[i] += dp[i] * timestep;\r\n    p[i] = max(p[i], 0);\r\n    prey[i] = p[i];\r\n}\r\nfor (j = 0; j < N_PRED; j += 1) {\r\n    d[j] += dd[j] * timestep;\r\n    d[j] = max(d[j], 0);\r\n    predator[j] = d[j];\r\n}\r\n\r\nstepCounter += 1;\r\n\r\n// Reset if extinction or too many steps\r\nint reset = 0;\r\nfor (i = 0; i < N_PREY; i += 1) {\r\n    if\r\n",
-														"safemath" : 1,
-														"hot" : 0
+														"hot" : 0,
+														"safemath" : 1
 													}
 ,
 													"rnbo_serial" : 1,
@@ -359,7 +429,7 @@
 											}
  ],
 										"lines" : [  ],
-										"originid" : "pat-216"
+										"originid" : "pat-34"
 									}
 ,
 									"patching_rect" : [ 286.0, 93.0, 308.0, 22.0 ],
@@ -418,7 +488,7 @@
 														"filename" : "multi-species_predator-prey_model_control.maxsnap",
 														"filepath" : "~/Documents/Max 9/Snapshots",
 														"filepos" : -1,
-														"snapshotfileid" : "aafc662109a51564d9def0a80ed300d9"
+														"snapshotfileid" : "67457c7e5c9213ff695aa9cf574cbd5f"
 													}
 
 												}
@@ -749,11 +819,11 @@
 													"patching_rect" : [ 1402.542406320571899, 926.271208524703979, 50.0, 23.0 ],
 													"rnbo_classname" : "number",
 													"rnbo_extra_attributes" : 													{
-														"maximum" : "<none>",
 														"minimum" : "<none>",
+														"maximum" : "<none>",
 														"initialFormat" : "integer",
-														"order" : "",
-														"preset" : 0
+														"preset" : 0,
+														"order" : ""
 													}
 ,
 													"rnbo_serial" : 1,
@@ -911,11 +981,11 @@
 													"patching_rect" : [ 1166.949180364608765, 926.271208524703979, 50.0, 23.0 ],
 													"rnbo_classname" : "number",
 													"rnbo_extra_attributes" : 													{
-														"maximum" : "<none>",
 														"minimum" : "<none>",
+														"maximum" : "<none>",
 														"initialFormat" : "integer",
-														"order" : "",
-														"preset" : 0
+														"preset" : 0,
+														"order" : ""
 													}
 ,
 													"rnbo_serial" : 2,
@@ -1149,11 +1219,11 @@
 													"patching_rect" : [ 924.576293230056763, 666.101710796356201, 50.0, 23.0 ],
 													"rnbo_classname" : "number",
 													"rnbo_extra_attributes" : 													{
-														"maximum" : "<none>",
 														"minimum" : "<none>",
+														"maximum" : "<none>",
 														"initialFormat" : "integer",
-														"order" : "",
-														"preset" : 0
+														"preset" : 0,
+														"order" : ""
 													}
 ,
 													"rnbo_serial" : 3,
@@ -1497,8 +1567,8 @@
 													"patching_rect" : [ 714.40679669380188, 951.694937944412231, 36.0, 23.0 ],
 													"rnbo_classname" : "out",
 													"rnbo_extra_attributes" : 													{
-														"meta" : "",
-														"comment" : ""
+														"comment" : "",
+														"meta" : ""
 													}
 ,
 													"rnbo_serial" : 1,
@@ -1580,8 +1650,8 @@
 													"patching_rect" : [ 102.542375326156616, 936.94070029258728, 36.0, 23.0 ],
 													"rnbo_classname" : "out",
 													"rnbo_extra_attributes" : 													{
-														"meta" : "",
-														"comment" : ""
+														"comment" : "",
+														"meta" : ""
 													}
 ,
 													"rnbo_serial" : 2,
@@ -1684,11 +1754,11 @@
 													"patching_rect" : [ 899.152563810348511, 822.881375551223755, 50.0, 23.0 ],
 													"rnbo_classname" : "number",
 													"rnbo_extra_attributes" : 													{
-														"maximum" : "<none>",
 														"minimum" : "<none>",
+														"maximum" : "<none>",
 														"initialFormat" : "float",
-														"order" : "",
-														"preset" : 0
+														"preset" : 0,
+														"order" : ""
 													}
 ,
 													"rnbo_serial" : 4,
@@ -1918,11 +1988,11 @@
 													"patching_rect" : [ 714.40679669380188, 749.152560234069824, 50.0, 23.0 ],
 													"rnbo_classname" : "number",
 													"rnbo_extra_attributes" : 													{
-														"maximum" : "<none>",
 														"minimum" : "<none>",
+														"maximum" : "<none>",
 														"initialFormat" : "integer",
-														"order" : "",
-														"preset" : 0
+														"preset" : 0,
+														"order" : ""
 													}
 ,
 													"rnbo_serial" : 5,
@@ -1942,11 +2012,11 @@
 													"patching_rect" : [ 102.542375326156616, 749.152560234069824, 50.0, 23.0 ],
 													"rnbo_classname" : "number",
 													"rnbo_extra_attributes" : 													{
-														"maximum" : "<none>",
 														"minimum" : "<none>",
+														"maximum" : "<none>",
 														"initialFormat" : "integer",
-														"order" : "",
-														"preset" : 0
+														"preset" : 0,
+														"order" : ""
 													}
 ,
 													"rnbo_serial" : 6,
@@ -1969,8 +2039,8 @@
 													"rnbo_classname" : "codebox",
 													"rnbo_extra_attributes" : 													{
 														"code" : "// Lotka-Volterra base model: 1 prey, 1 predator\r\n\r\n// Parameters with metadata\r\n@param({ min: 0.0, max: 1.0 }) alpha = 0.1;     // prey birth rate\r\n@param({ min: 0.0, max: 1.0 }) beta = 0.03;     // predation rate\r\n@param({ min: 0.0, max: 1.0 }) delta = 0.01;    // predator reproduction rate\r\n@param({ min: 0.0, max: 1.0 }) gamma = 0.1;     // predator death rate\r\n\t\r\n@param({ min: 0.0, max: 1 }) radiation = 0.001;\r\n\r\n@param({ min: 0.001, max: 1.0 }) timestep = 0.1;\r\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\r\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\r\n\r\n// Persistent state variables\r\n@state prey = 10.0;\r\n@state predator = 5.0;\r\n@state stepCounter = 0.0;\r\n\r\n// Output current populations\r\nout1 = prey;\r\nout2 = predator;\r\n\r\n// Local variables\r\nx = prey;\r\ny = predator;\r\n\r\n// Lotka-Volterra equations\r\ndx = (alpha * x) - (beta * x * y);\r\ndy = (delta * x * y) - (gamma * y);\r\n\r\n\r\n// Euler integration\r\nx = x + (dx * timestep);\r\ny = y + (dy * timestep);\r\n\r\n\r\n// Clamp to avoid negative populations\r\nx = max(x - radiation, 0);\r\ny = max(y - radiation, 0);\r\n\r\n// Update states\r\nprey = x;\r\npredator = y;\r\nstepCounter = stepCounter + 1;\r\n\r\n\r\n// Check reset conditions\r\nif (x < resetThreshold || y < resetThreshold || stepCounter >= maxSteps) {\r\n    prey = 10;\r\n    predator = 5;\r\n    stepCounter = 0;\r\n}\r\n",
-														"safemath" : 1,
-														"hot" : 0
+														"hot" : 0,
+														"safemath" : 1
 													}
 ,
 													"rnbo_serial" : 1,
@@ -2217,8 +2287,8 @@
 													"patching_rect" : [ 102.222218871116638, 39.259257972240448, 24.0, 24.0 ],
 													"rnbo_classname" : "toggle",
 													"rnbo_extra_attributes" : 													{
-														"order" : "",
-														"preset" : 0
+														"preset" : 0,
+														"order" : ""
 													}
 ,
 													"rnbo_serial" : 1,
@@ -2869,7 +2939,7 @@
 
 											}
  ],
-										"originid" : "pat-214",
+										"originid" : "pat-36",
 										"export_config" : 										{
 											"vst-au-export" : 											{
 												"vst-au-export-ins" : 												{
@@ -2940,7 +3010,7 @@
 														"filename" : "predator-prey_model_control.maxsnap",
 														"filepath" : "~/Documents/Max 9/Snapshots",
 														"filepos" : -1,
-														"snapshotfileid" : "b57b8584bd63762b3cef8ae5c510611a"
+														"snapshotfileid" : "2473f4c3baf119d80734890ada55bf7b"
 													}
 
 												}
@@ -2970,7 +3040,7 @@
 
 							}
  ],
-						"originid" : "pat-212"
+						"originid" : "pat-32"
 					}
 ,
 					"patching_rect" : [ 283.0, 181.0, 35.0, 22.0 ],
@@ -3035,11 +3105,26 @@
 						}
 ,
 						"classnamespace" : "rnbo",
-						"rect" : [ 498.0, 192.0, 1041.0, 735.0 ],
+						"rect" : [ 1023.0, 532.0, 1638.0, 942.0 ],
 						"default_fontname" : "Lato",
 						"gridsize" : [ 15.0, 15.0 ],
 						"title" : "lvlfo-multispecies",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-40",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 173.0, 141.0, 56.0, 23.0 ],
+									"rnbo_classname" : "loadbang",
+									"rnbo_serial" : 2,
+									"rnbo_uniqueid" : "loadbang_obj-40",
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-28",
 									"maxclass" : "button",
@@ -3047,9 +3132,9 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 260.0, 155.0, 24.0, 24.0 ],
+									"patching_rect" : [ 173.0, 182.0, 24.0, 24.0 ],
 									"rnbo_classname" : "button",
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "button_obj-28"
 								}
 
@@ -3062,17 +3147,17 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 101.0, 283.0, 50.0, 23.0 ],
+									"patching_rect" : [ 30.0, 297.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
+										"maximum" : "<none>",
 										"initialFormat" : "float",
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
-									"rnbo_serial" : 12,
+									"rnbo_serial" : 5,
 									"rnbo_uniqueid" : "number_obj-24"
 								}
 
@@ -3085,17 +3170,17 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 126.0, 161.0, 50.0, 23.0 ],
+									"patching_rect" : [ 55.0, 175.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
+										"maximum" : "<none>",
 										"initialFormat" : "float",
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
-									"rnbo_serial" : 11,
+									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "number_obj-21"
 								}
 
@@ -3107,13 +3192,13 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 204.5, 256.0, 29.5, 23.0 ],
+									"patching_rect" : [ 134.0, 270.0, 29.5, 23.0 ],
 									"rnbo_classname" : "/",
 									"rnbo_extra_attributes" : 									{
 										"hot" : 0
 									}
 ,
-									"rnbo_serial" : 4,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "/_obj-20",
 									"text" : "/"
 								}
@@ -3126,7 +3211,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 244.0, 200.0, 67.0, 23.0 ],
+									"patching_rect" : [ 173.0, 214.0, 67.0, 23.0 ],
 									"rnbo_classname" : "samplerate",
 									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "samplerate_obj-19",
@@ -3142,17 +3227,17 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 360.0, 279.0, 50.0, 23.0 ],
+									"patching_rect" : [ 234.0, 116.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
+										"maximum" : "<none>",
 										"initialFormat" : "float",
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
-									"rnbo_serial" : 10,
+									"rnbo_serial" : 7,
 									"rnbo_uniqueid" : "number_obj-16"
 								}
 
@@ -3165,14 +3250,14 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 290.0, 281.0, 50.0, 23.0 ],
+									"patching_rect" : [ 339.0, 266.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
+										"maximum" : "<none>",
 										"initialFormat" : "float",
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
 									"rnbo_serial" : 8,
@@ -3186,14 +3271,14 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 962.0, 892.0, 43.0, 23.0 ],
+									"patching_rect" : [ 1011.0, 877.0, 43.0, 23.0 ],
 									"rnbo_classname" : "out~",
 									"rnbo_extra_attributes" : 									{
-										"meta" : "",
-										"comment" : ""
+										"comment" : "",
+										"meta" : ""
 									}
 ,
-									"rnbo_serial" : 12,
+									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "out~_obj-6",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -3282,14 +3367,14 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 743.0, 892.0, 43.0, 23.0 ],
+									"patching_rect" : [ 792.0, 877.0, 43.0, 23.0 ],
 									"rnbo_classname" : "out~",
 									"rnbo_extra_attributes" : 									{
-										"meta" : "",
-										"comment" : ""
+										"comment" : "",
+										"meta" : ""
 									}
 ,
-									"rnbo_serial" : 10,
+									"rnbo_serial" : 7,
 									"rnbo_uniqueid" : "out~_obj-5",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -3378,11 +3463,11 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 524.0, 892.0, 43.0, 23.0 ],
+									"patching_rect" : [ 573.0, 877.0, 43.0, 23.0 ],
 									"rnbo_classname" : "out~",
 									"rnbo_extra_attributes" : 									{
-										"meta" : "",
-										"comment" : ""
+										"comment" : "",
+										"meta" : ""
 									}
 ,
 									"rnbo_serial" : 8,
@@ -3474,14 +3559,14 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 304.0, 892.0, 43.0, 23.0 ],
+									"patching_rect" : [ 353.0, 877.0, 43.0, 23.0 ],
 									"rnbo_classname" : "out~",
 									"rnbo_extra_attributes" : 									{
-										"meta" : "",
-										"comment" : ""
+										"comment" : "",
+										"meta" : ""
 									}
 ,
-									"rnbo_serial" : 6,
+									"rnbo_serial" : 9,
 									"rnbo_uniqueid" : "out~_obj-3",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -3570,14 +3655,14 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 85.0, 892.0, 43.0, 23.0 ],
+									"patching_rect" : [ 134.0, 877.0, 43.0, 23.0 ],
 									"rnbo_classname" : "out~",
 									"rnbo_extra_attributes" : 									{
-										"meta" : "",
-										"comment" : ""
+										"comment" : "",
+										"meta" : ""
 									}
 ,
-									"rnbo_serial" : 4,
+									"rnbo_serial" : 10,
 									"rnbo_uniqueid" : "out~_obj-2",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -3662,7 +3747,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "// Multi-species Lotka–Volterra: up to 4 species\n\n@param({ min: 1, max: 4, steps: 1 }) numSpecies = 4; // actual number of species\n\n// Species-specific intrinsic growth or decay rates\n@param({ min: -2.0, max: 2.0 }) r0 = 0.1;\n@param({ min: -2.0, max: 2.0 }) r1 = -0.1;\n@param({ min: -2.0, max: 2.0 }) r2 = 0.1;\n@param({ min: -2.0, max: 2.0 }) r3 = -0.1;\n\n// Interaction matrix A[i][j]: effect of species j on species i\n@param({ min: -1.0, max: 1.0 }) A00 = -0.01; @param A01 = -0.03; @param A02 = 0.00; @param A03 = 0.00;\n@param({ min: -1.0, max: 1.0 }) A10 =  0.01; @param A11 = -0.01; @param A12 = -0.02; @param A13 = 0.00;\n@param({ min: -1.0, max: 1.0 }) A20 =  0.00; @param A21 = 0.01;  @param A22 = -0.01; @param A23 = -0.03;\n@param({ min: -1.0, max: 1.0 }) A30 =  0.00; @param A31 = 0.00;  @param A32 = 0.02;  @param A33 = -0.01;\n\n// Other simulation parameters\n@param({ min: 0.0, max: 1.0 }) radiation = 0.001;\n@param({ min: 0.001, max: 1.0 }) timestep = 0.01;\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\n\n// Persistent state variables (populations and step counter)\n@state p0 = 10.0;\n@state p1 = 5.0;\n@state p2 = 7.0;\n@state p3 = 3.0;\n@state stepCounter = 0.0;\n\n// Pack rates and populations into arrays\r\nlet r = [r0, r1, r2, r3];\nlet pop = [p0, p1, p2, p3];\n\n// Flatten interaction matrix into a 1D array A[i * 4 + j]\nlet A = [\n    A00, A01, A02, A03,\n    A10, A11, A12, A13,\n    A20, A21, A22, A23,\n    A30, A31, A32, A33\n];\n\n// Temporary storage for updated populations\ni = 0;\nfor (var i = 0; i < numSpecies; i += 1) {\n    var xi = pop[i];\n    var interactionSum = 0;\n\n    for (var j = 0; j < numSpecies; j += 1) {\n        interactionSum += A[i * 4 + j] * pop[j];\n    }\n\n    var dx = r[i] * xi + xi * interactionSum;\n    xi = xi + (dx * timestep);\n    xi = max(xi - radiation, 0); // radiation & clamping\n\n    pop[i] = xi;\n}\n\n\n// Write back to state\np0 = pop[0];\np1 = pop[1];\np2 = pop[2];\np3 = pop[3];\nstepCounter += timestep;\n\n// Output population states\nout1 = pop[0];\nout2 = pop[1];\nout3 = pop[2];\nout4 = pop[3];\n\n// Output reset signal\nresetFlag = 0;\n\n// Reset conditions\nshouldReset = 0;\ni = 0;\nfor (var i = 0; i < numSpecies; i += 1) {\n    if (pop[i] < resetThreshold) {\n        shouldReset = 1;\n    }\n}\nif (stepCounter >= maxSteps) {\n    shouldReset = 1;\n}\n\nif (shouldReset) {\n    p0 = 10.0 + random(0, 50);\n    p1 = 5.0 + random(-50, 50);\n    p2 = 7.0 + random(-50, 50);\n    p3 = 3.0 + random(0, 50);\n    stepCounter = 0.0;\n    resetFlag = 1;\n}\n\nout5 = resetFlag;\n",
+									"code" : "// Multi-species Lotka–Volterra: up to 4 species\n\n@param({ min: 1, max: 4, steps: 1 }) numSpecies = 4; // actual number of species\n\n// Species-specific intrinsic growth or decay rates\n@param({ min: -2.0, max: 2.0 }) r0 = 0.1;\n@param({ min: -2.0, max: 2.0 }) r1 = -0.1;\n@param({ min: -2.0, max: 2.0 }) r2 = 0.1;\n@param({ min: -2.0, max: 2.0 }) r3 = -0.1;\n\n// Interaction matrix A[i][j]: effect of species j on species i\n@param({ min: -1.0, max: 1.0 }) A00 = -0.01; @param A01 = -0.03; @param A02 = 0.00; @param A03 = 0.00;\n@param({ min: -1.0, max: 1.0 }) A10 =  0.01; @param A11 = -0.01; @param A12 = -0.02; @param A13 = 0.00;\n@param({ min: -1.0, max: 1.0 }) A20 =  0.00; @param A21 = 0.01;  @param A22 = -0.01; @param A23 = -0.03;\n@param({ min: -1.0, max: 1.0 }) A30 =  0.00; @param A31 = 0.00;  @param A32 = 0.02;  @param A33 = -0.01;\n\n// Other simulation parameters\n@param({ min: 0.0, max: 1.0 }) radiation = 0.001; // Applied to all animals each cycle\n@param({ min: 0.001, max: 1.0 }) timestep = 0.01;\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\n\n// Persistent state variables (populations and step counter)\n@state p0 = 10.0;\n@state p1 = 5.0;\n@state p2 = 7.0;\n@state p3 = 3.0;\n@state stepCounter = 0.0;\n\n// Pack rates and populations into arrays\r\nlet r = [r0, r1, r2, r3];\nlet pop = [p0, p1, p2, p3];\n\n// Flatten interaction matrix into a 1D array A[i * 4 + j]\nlet A = [\n    A00, A01, A02, A03,\n    A10, A11, A12, A13,\n    A20, A21, A22, A23,\n    A30, A31, A32, A33\n];\n\n// Temporary storage for updated populations\ni = 0;\nfor (var i = 0; i < numSpecies; i += 1) {\n    var xi = pop[i];\n    var interactionSum = 0;\n\n    for (var j = 0; j < numSpecies; j += 1) {\n        interactionSum += A[i * 4 + j] * pop[j];\n    }\n\n    var dx = r[i] * xi + xi * interactionSum;\n    xi = xi + (dx * timestep);\n    xi = max(xi - radiation, 0); // radiation & clamping\n\n    pop[i] = xi;\n}\n\n\n// Write back to state\np0 = pop[0];\np1 = pop[1];\np2 = pop[2];\np3 = pop[3];\nstepCounter += timestep;\n\n// Output population states\nout1 = pop[0];\nout2 = pop[1];\nout3 = pop[2];\nout4 = pop[3];\n\n// Output reset signal\nresetFlag = 0;\n\n// Reset conditions\nshouldReset = 0;\ni = 0;\nfor (var i = 0; i < numSpecies; i += 1) {\n    if (pop[i] < resetThreshold) {\n        shouldReset = 1;\n    }\n}\nif (stepCounter >= maxSteps) {\n    shouldReset = 1;\n}\n\nif (shouldReset) {\n    p0 = 10.0 + random(0, 50);\n    p1 = 5.0 + random(-50, 50);\n    p2 = 7.0 + random(-50, 50);\n    p3 = 3.0 + random(0, 50);\n    stepCounter = 0.0;\n    resetFlag = 1;\n}\n\nout5 = resetFlag;\n",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -3671,15 +3756,15 @@
 									"numinlets" : 1,
 									"numoutlets" : 5,
 									"outlettype" : [ "signal", "signal", "signal", "signal", "signal" ],
-									"patching_rect" : [ 85.0, 398.0, 896.0, 471.0 ],
+									"patching_rect" : [ 134.0, 383.0, 896.0, 471.0 ],
 									"rnbo_classname" : "codebox~",
 									"rnbo_extra_attributes" : 									{
-										"code" : "// Multi-species Lotka–Volterra: up to 4 species\n\n@param({ min: 1, max: 4, steps: 1 }) numSpecies = 4; // actual number of species\n\n// Species-specific intrinsic growth or decay rates\n@param({ min: -2.0, max: 2.0 }) r0 = 0.1;\n@param({ min: -2.0, max: 2.0 }) r1 = -0.1;\n@param({ min: -2.0, max: 2.0 }) r2 = 0.1;\n@param({ min: -2.0, max: 2.0 }) r3 = -0.1;\n\n// Interaction matrix A[i][j]: effect of species j on species i\n@param({ min: -1.0, max: 1.0 }) A00 = -0.01; @param A01 = -0.03; @param A02 = 0.00; @param A03 = 0.00;\n@param({ min: -1.0, max: 1.0 }) A10 =  0.01; @param A11 = -0.01; @param A12 = -0.02; @param A13 = 0.00;\n@param({ min: -1.0, max: 1.0 }) A20 =  0.00; @param A21 = 0.01;  @param A22 = -0.01; @param A23 = -0.03;\n@param({ min: -1.0, max: 1.0 }) A30 =  0.00; @param A31 = 0.00;  @param A32 = 0.02;  @param A33 = -0.01;\n\n// Other simulation parameters\n@param({ min: 0.0, max: 1.0 }) radiation = 0.001;\n@param({ min: 0.001, max: 1.0 }) timestep = 0.01;\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\n\n// Persistent state variables (populations and step counter)\n@state p0 = 10.0;\n@state p1 = 5.0;\n@state p2 = 7.0;\n@state p3 = 3.0;\n@state stepCounter = 0.0;\n\n// Pack rates and populations into arrays\r\nlet r = [r0, r1, r2, r3];\nlet pop = [p0, p1, p2, p3];\n\n// Flatten interaction matrix into a 1D array A[i * 4 + j]\nlet A = [\n    A00, A01, A02, A03,\n    A10, A11, A12, A13,\n    A20, A21, A22, A23,\n    A30, A31, A32, A33\n];\n\n// Temporary storage for updated populations\ni = 0;\nfor (var i = 0; i < numSpecies; i += 1) {\n    var xi = pop[i];\n    var interactionSum = 0;\n\n    for (var j = 0; j < numSpecies; j += 1) {\n        interactionSum += A[i * 4 + j] * pop[j];\n    }\n\n    var dx = r[i] * xi + xi * interactionSum;\n    xi = xi + (dx * timestep);\n    xi = max(xi - radiation, 0); // radiation & clamping\n\n    pop[i] = xi;\n}\n\n\n// Write back to state\np0 = pop[0];\np1 = pop[1];\np2 = pop[2];\np3 = pop[3];\nstepCounter += timestep;\n\n// Output population states\nout1 = pop[0];\nout2 = pop[1];\nout3 = pop[2];\nout4 = pop[3];\n\n// Output reset signal\nresetFlag = 0;\n\n// Reset conditions\nshouldReset = 0;\ni = 0;\nfor (var i = 0; i < numSpecies; i += 1) {\n    if (pop[i] < resetThreshold) {\n        shouldReset = 1;\n    }\n}\nif (stepCounter >= maxSteps) {\n    shouldReset = 1;\n}\n\nif (shouldReset) {\n    p0 = 10.0 + random(0, 50);\n    p1 = 5.0 + random(-50, 50);\n    p2 = 7.0 + random(-50, 50);\n    p3 = 3.0 + random(0, 50);\n    stepCounter = 0.0;\n    resetFlag = 1;\n}\n\nout5 = resetFlag;\n",
-										"expr" : "",
-										"safemath" : 1
+										"code" : "// Multi-species Lotka–Volterra: up to 4 species\n\n@param({ min: 1, max: 4, steps: 1 }) numSpecies = 4; // actual number of species\n\n// Species-specific intrinsic growth or decay rates\n@param({ min: -2.0, max: 2.0 }) r0 = 0.1;\n@param({ min: -2.0, max: 2.0 }) r1 = -0.1;\n@param({ min: -2.0, max: 2.0 }) r2 = 0.1;\n@param({ min: -2.0, max: 2.0 }) r3 = -0.1;\n\n// Interaction matrix A[i][j]: effect of species j on species i\n@param({ min: -1.0, max: 1.0 }) A00 = -0.01; @param A01 = -0.03; @param A02 = 0.00; @param A03 = 0.00;\n@param({ min: -1.0, max: 1.0 }) A10 =  0.01; @param A11 = -0.01; @param A12 = -0.02; @param A13 = 0.00;\n@param({ min: -1.0, max: 1.0 }) A20 =  0.00; @param A21 = 0.01;  @param A22 = -0.01; @param A23 = -0.03;\n@param({ min: -1.0, max: 1.0 }) A30 =  0.00; @param A31 = 0.00;  @param A32 = 0.02;  @param A33 = -0.01;\n\n// Other simulation parameters\n@param({ min: 0.0, max: 1.0 }) radiation = 0.001; // Applied to all animals each cycle\n@param({ min: 0.001, max: 1.0 }) timestep = 0.01;\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\n\n// Persistent state variables (populations and step counter)\n@state p0 = 10.0;\n@state p1 = 5.0;\n@state p2 = 7.0;\n@state p3 = 3.0;\n@state stepCounter = 0.0;\n\n// Pack rates and populations into arrays\r\nlet r = [r0, r1, r2, r3];\nlet pop = [p0, p1, p2, p3];\n\n// Flatten interaction matrix into a 1D array A[i * 4 + j]\nlet A = [\n    A00, A01, A02, A03,\n    A10, A11, A12, A13,\n    A20, A21, A22, A23,\n    A30, A31, A32, A33\n];\n\n// Temporary storage for updated populations\ni = 0;\nfor (var i = 0; i < numSpecies; i += 1) {\n    var xi = pop[i];\n    var interactionSum = 0;\n\n    for (var j = 0; j < numSpecies; j += 1) {\n        interactionSum += A[i * 4 + j] * pop[j];\n    }\n\n    var dx = r[i] * xi + xi * interactionSum;\n    xi = xi + (dx * timestep);\n    xi = max(xi - radiation, 0); // radiation & clamping\n\n    pop[i] = xi;\n}\n\n\n// Write back to state\np0 = pop[0];\np1 = pop[1];\np2 = pop[2];\np3 = pop[3];\nstepCounter += timestep;\n\n// Output population states\nout1 = pop[0];\nout2 = pop[1];\nout3 = pop[2];\nout4 = pop[3];\n\n// Output reset signal\nresetFlag = 0;\n\n// Reset conditions\nshouldReset = 0;\ni = 0;\nfor (var i = 0; i < numSpecies; i += 1) {\n    if (pop[i] < resetThreshold) {\n        shouldReset = 1;\n    }\n}\nif (stepCounter >= maxSteps) {\n    shouldReset = 1;\n}\n\nif (shouldReset) {\n    p0 = 10.0 + random(0, 50);\n    p1 = 5.0 + random(-50, 50);\n    p2 = 7.0 + random(-50, 50);\n    p3 = 3.0 + random(0, 50);\n    stepCounter = 0.0;\n    resetFlag = 1;\n}\n\nout5 = resetFlag;\n",
+										"safemath" : 1,
+										"expr" : ""
 									}
 ,
-									"rnbo_serial" : 22,
+									"rnbo_serial" : 5,
 									"rnbo_uniqueid" : "codebox~_obj-1",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4158,9 +4243,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 85.0, 339.0, 73.0, 23.0 ],
+									"patching_rect" : [ 134.0, 324.0, 73.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 28,
 									"rnbo_uniqueid" : "set_obj-10",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4215,9 +4300,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 290.0, 318.0, 49.0, 23.0 ],
+									"patching_rect" : [ 339.0, 303.0, 49.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 6,
+									"rnbo_serial" : 29,
 									"rnbo_uniqueid" : "set_obj-7",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4272,9 +4357,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 357.0, 318.0, 74.0, 23.0 ],
+									"patching_rect" : [ 234.0, 148.0, 74.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 8,
+									"rnbo_serial" : 30,
 									"rnbo_uniqueid" : "set_obj-14",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -4319,6 +4404,1203 @@
 									}
 ,
 									"text" : "set radiation"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 408.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 31,
+									"rnbo_uniqueid" : "set_obj-8",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A01"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 478.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 32,
+									"rnbo_uniqueid" : "set_obj-11",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A02"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 540.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 33,
+									"rnbo_uniqueid" : "set_obj-12",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A03"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-13",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 655.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 34,
+									"rnbo_uniqueid" : "set_obj-13",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A10"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-17",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 720.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 35,
+									"rnbo_uniqueid" : "set_obj-17",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A11"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-18",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 789.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 36,
+									"rnbo_uniqueid" : "set_obj-18",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A12"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-22",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 859.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 37,
+									"rnbo_uniqueid" : "set_obj-22",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A13"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-23",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 952.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 38,
+									"rnbo_uniqueid" : "set_obj-23",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A20"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-25",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1016.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 39,
+									"rnbo_uniqueid" : "set_obj-25",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A21"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-26",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1084.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 40,
+									"rnbo_uniqueid" : "set_obj-26",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A22"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-27",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1151.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 41,
+									"rnbo_uniqueid" : "set_obj-27",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A23"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-29",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1231.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 42,
+									"rnbo_uniqueid" : "set_obj-29",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A30"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-30",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1297.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 43,
+									"rnbo_uniqueid" : "set_obj-30",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A31"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-31",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1361.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 44,
+									"rnbo_uniqueid" : "set_obj-31",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A32"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-32",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1423.0, 303.0, 49.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 45,
+									"rnbo_uniqueid" : "set_obj-32",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set A33"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-33",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1050.0, 389.0, 78.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 46,
+									"rnbo_uniqueid" : "set_obj-33",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set maxSteps"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-35",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 413.0, 158.0, 39.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 47,
+									"rnbo_uniqueid" : "set_obj-35",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set r0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-36",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 471.0, 158.0, 39.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 48,
+									"rnbo_uniqueid" : "set_obj-36",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set r1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-37",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 525.0, 158.0, 39.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 49,
+									"rnbo_uniqueid" : "set_obj-37",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set r2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-38",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 583.0, 158.0, 39.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 50,
+									"rnbo_uniqueid" : "set_obj-38",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set r3"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-39",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1142.0, 389.0, 105.0, 23.0 ],
+									"rnbo_classname" : "set",
+									"rnbo_serial" : 51,
+									"rnbo_uniqueid" : "set_obj-39",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "set resetThreshold"
 								}
 
 							}
@@ -4368,6 +5650,27 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-12", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
 									"source" : [ "obj-14", 0 ]
 								}
 
@@ -4381,6 +5684,20 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-17", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-18", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-20", 1 ],
 									"source" : [ "obj-19", 0 ]
 								}
@@ -4389,7 +5706,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-10", 0 ],
-									"order" : 1,
+									"order" : 0,
 									"source" : [ "obj-20", 0 ]
 								}
 
@@ -4397,7 +5714,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-24", 0 ],
-									"order" : 0,
+									"order" : 1,
 									"source" : [ "obj-20", 0 ]
 								}
 
@@ -4411,8 +5728,120 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-22", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-23", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-25", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-26", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-27", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-19", 0 ],
 									"source" : [ "obj-28", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-29", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-30", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-31", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-32", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-33", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-35", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-36", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-37", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-38", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-39", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-28", 0 ],
+									"source" : [ "obj-40", 0 ]
 								}
 
 							}
@@ -4425,17 +5854,23 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-7", 0 ],
 									"source" : [ "obj-9", 0 ]
 								}
 
 							}
  ],
-						"originid" : "pat-172"
+						"originid" : "pat-38"
 					}
 ,
 					"patching_rect" : [ 797.0, 341.0, 168.0, 22.0 ],
-					"presentation_linecount" : 3,
 					"rnboattrcache" : 					{
 
 					}
@@ -4477,21 +5912,21 @@
 									"filetype" : "C74Snapshot",
 									"version" : 2,
 									"minorversion" : 0,
-									"name" : "lvlfo",
+									"name" : "lvlfo-multispecies",
 									"origin" : "lvlfo-multispecies",
 									"type" : "rnbo",
 									"subtype" : "",
-									"embed" : 0,
+									"embed" : 1,
 									"snapshot" : 									{
 										"__presetid" : "lvlfo-multispecies"
 									}
 ,
 									"fileref" : 									{
-										"name" : "lvlfo",
-										"filename" : "lvlfo_20250512.maxsnap",
+										"name" : "lvlfo-multispecies",
+										"filename" : "lvlfo-multispecies.maxsnap",
 										"filepath" : "~/Documents/Max 9/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "79bbc9f4d4e817a6a452a17fb21ca70f"
+										"snapshotfileid" : "34457300f85e209495f4499e1d4a3137"
 									}
 
 								}
@@ -4511,7 +5946,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 803.0, 794.0, 35.0, 22.0 ],
+					"patching_rect" : [ 802.0, 924.0, 35.0, 22.0 ],
 					"text" : "dac~"
 				}
 
@@ -4631,14 +6066,14 @@
 									"patching_rect" : [ 505.333348393440247, 264.00000786781311, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
+										"maximum" : "<none>",
 										"initialFormat" : "float",
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
-									"rnbo_serial" : 11,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "number_obj-33"
 								}
 
@@ -4654,14 +6089,14 @@
 									"patching_rect" : [ 413.333345651626587, 264.00000786781311, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
+										"maximum" : "<none>",
 										"initialFormat" : "float",
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
-									"rnbo_serial" : 9,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "number_obj-29"
 								}
 
@@ -4677,14 +6112,14 @@
 									"patching_rect" : [ 325.333343029022217, 264.00000786781311, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
+										"maximum" : "<none>",
 										"initialFormat" : "float",
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
-									"rnbo_serial" : 7,
+									"rnbo_serial" : 3,
 									"rnbo_uniqueid" : "number_obj-25"
 								}
 
@@ -4700,14 +6135,14 @@
 									"patching_rect" : [ 234.66667366027832, 264.00000786781311, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
+										"maximum" : "<none>",
 										"initialFormat" : "float",
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
-									"rnbo_serial" : 5,
+									"rnbo_serial" : 4,
 									"rnbo_uniqueid" : "number_obj-21"
 								}
 
@@ -4723,14 +6158,14 @@
 									"patching_rect" : [ 100.000002980232239, 200.000005960464478, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
+										"maximum" : "<none>",
 										"initialFormat" : "float",
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
-									"rnbo_serial" : 4,
+									"rnbo_serial" : 5,
 									"rnbo_uniqueid" : "number_obj-17"
 								}
 
@@ -4742,13 +6177,13 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 100.000002980232239, 240.000007152557373, 46.0, 23.0 ],
+									"patching_rect" : [ 100.000002980232239, 240.000007152557373, 48.0, 23.0 ],
 									"rnbo_classname" : "/",
 									"rnbo_extra_attributes" : 									{
 										"hot" : 0
 									}
 ,
-									"rnbo_serial" : 2,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "/_obj-13",
 									"text" : "/ 1000."
 								}
@@ -4761,13 +6196,13 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 538.666682720184326, 930.666694402694702, 72.0, 23.0 ],
+									"patching_rect" : [ 538.666682720184326, 930.666694402694702, 73.0, 23.0 ],
 									"rnbo_classname" : "snapshot~",
 									"rnbo_extra_attributes" : 									{
 										"mode" : 0.0
 									}
 ,
-									"rnbo_serial" : 2,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "snapshot~_obj-5",
 									"text" : "snapshot~ 1"
 								}
@@ -4780,13 +6215,13 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 100.000002980232239, 930.666694402694702, 72.0, 23.0 ],
+									"patching_rect" : [ 100.000002980232239, 930.666694402694702, 73.0, 23.0 ],
 									"rnbo_classname" : "snapshot~",
 									"rnbo_extra_attributes" : 									{
 										"mode" : 0.0
 									}
 ,
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "snapshot~_obj-4",
 									"text" : "snapshot~ 1"
 								}
@@ -4860,14 +6295,14 @@
 									"patching_rect" : [ 538.666682720184326, 1070.666698575019836, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
+										"maximum" : "<none>",
 										"initialFormat" : "integer",
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "number_obj-80"
 								}
 
@@ -5022,14 +6457,14 @@
 									"patching_rect" : [ 100.000002980232239, 1070.666698575019836, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"maximum" : "<none>",
 										"minimum" : "<none>",
+										"maximum" : "<none>",
 										"initialFormat" : "integer",
-										"order" : "",
-										"preset" : 0
+										"preset" : 0,
+										"order" : ""
 									}
 ,
-									"rnbo_serial" : 2,
+									"rnbo_serial" : 7,
 									"rnbo_uniqueid" : "number_obj-15"
 								}
 
@@ -5111,8 +6546,8 @@
 									"patching_rect" : [ 977.333362460136414, 866.666692495346069, 43.0, 23.0 ],
 									"rnbo_classname" : "out~",
 									"rnbo_extra_attributes" : 									{
-										"meta" : "",
-										"comment" : ""
+										"comment" : "",
+										"meta" : ""
 									}
 ,
 									"rnbo_serial" : 1,
@@ -5207,8 +6642,8 @@
 									"patching_rect" : [ 130.769222974777222, 866.666615009307861, 43.0, 23.0 ],
 									"rnbo_classname" : "out~",
 									"rnbo_extra_attributes" : 									{
-										"meta" : "",
-										"comment" : ""
+										"comment" : "",
+										"meta" : ""
 									}
 ,
 									"rnbo_serial" : 2,
@@ -5303,8 +6738,8 @@
 									"patching_rect" : [ 569.230735301971436, 866.666615009307861, 43.0, 23.0 ],
 									"rnbo_classname" : "out~",
 									"rnbo_extra_attributes" : 									{
-										"meta" : "",
-										"comment" : ""
+										"comment" : "",
+										"meta" : ""
 									}
 ,
 									"rnbo_serial" : 3,
@@ -5405,11 +6840,11 @@
 									"rnbo_classname" : "codebox~",
 									"rnbo_extra_attributes" : 									{
 										"code" : "// Lotka-Volterra base model: 1 prey, 1 predator\r\n\r\n// Parameters with metadata\r\n@param({ min: 0.0, max: 1.0 }) alpha = 0.1;     // prey birth rate\r\n@param({ min: 0.0, max: 1.0 }) beta = 0.03;     // predation rate\r\n@param({ min: 0.0, max: 1.0 }) delta = 0.01;    // predator reproduction rate\r\n@param({ min: 0.0, max: 1.0 }) gamma = 0.1;     // predator death rate\r\n\t\r\n@param({ min: 0.0, max: 1 }) radiation = 0.001;\r\n\r\n@param({ min: 0.001, max: 1.0 }) timestep = 0.01;\r\n@param({ min: 0.0, max: 10.0 }) resetThreshold = 0.01;\r\n@param({ min: 10, max: 50000, steps: 100 }) maxSteps = 10000;\r\n\r\n// Persistent state variables\r\n@state prey = 10.0;\r\n@state predator = 5.0;\r\n@state stepCounter = 0.0;\r\n\r\n@state alphaDev = 0;\r\n\r\n// Output current populations\r\nout1 = prey;\r\nout2 = predator;\r\n\r\n// Local variables\r\nx = prey;\r\ny = predator;\r\n\r\n// Lotka-Volterra equations\r\ndx = (alphaDev * x) - (beta * x * y);\r\ndy = (delta * x * y) - (gamma * y);\r\n\r\n\r\n// Euler integration\r\nx = x + (dx * timestep);\r\ny = y + (dy * timestep);\r\n\r\n\r\n// Clamp to avoid negative populations\r\nx = max(x - radiation, 0);\r\ny = max(y - radiation, 0);\r\n\r\n// Update states\r\nprey = x;\r\npredator = y;\r\nstepCounter = stepCounter + timestep;\r\n\r\nout3 = 0;\r\n\r\n\r\n// Check reset conditions\r\nif (x < resetThreshold || y < resetThreshold || stepCounter >= maxSteps) {\r\n    prey = 10;\r\n    predator = 5;\r\n    stepCounter = 0;\r\n\r\n\talphaDev = alpha + random(-0.1, 0.1);\r\n\r\n\tout3 = 1;\r\n}\r\n",
-										"expr" : "",
-										"safemath" : 1
+										"safemath" : 1,
+										"expr" : ""
 									}
 ,
-									"rnbo_serial" : 15,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "codebox~_obj-1",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5688,7 +7123,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 234.66667366027832, 300.000008940696716, 55.0, 23.0 ],
+									"patching_rect" : [ 234.66667366027832, 300.000008940696716, 56.0, 23.0 ],
 									"rnbo_classname" : "set",
 									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "set_obj-19",
@@ -5745,9 +7180,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 325.333343029022217, 300.000008940696716, 50.0, 23.0 ],
+									"patching_rect" : [ 325.333343029022217, 300.000008940696716, 51.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 5,
+									"rnbo_serial" : 3,
 									"rnbo_uniqueid" : "set_obj-24",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5802,9 +7237,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 413.333345651626587, 300.000008940696716, 53.0, 23.0 ],
+									"patching_rect" : [ 413.333345651626587, 300.000008940696716, 54.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 7,
+									"rnbo_serial" : 4,
 									"rnbo_uniqueid" : "set_obj-28",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -5861,7 +7296,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 505.333348393440247, 300.000008940696716, 65.0, 23.0 ],
 									"rnbo_classname" : "set",
-									"rnbo_serial" : 9,
+									"rnbo_serial" : 5,
 									"rnbo_uniqueid" : "set_obj-32",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -6157,7 +7592,7 @@
 
 							}
  ],
-						"originid" : "pat-128"
+						"originid" : "pat-40"
 					}
 ,
 					"patching_rect" : [ 283.0, 299.0, 98.0, 22.0 ],
@@ -6206,7 +7641,7 @@
 									"origin" : "lvlfo",
 									"type" : "rnbo",
 									"subtype" : "",
-									"embed" : 0,
+									"embed" : 1,
 									"snapshot" : 									{
 										"__presetid" : "lvlfo"
 									}
@@ -6216,7 +7651,7 @@
 										"filename" : "lvlfo.maxsnap",
 										"filepath" : "~/Documents/Max 9/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "3775534101d3434bc96195dff373ab3c"
+										"snapshotfileid" : "eeaf3098964c976a7a50c5b8e31c6107"
 									}
 
 								}
@@ -6248,7 +7683,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 50.0, 160.0, 150.0, 181.0 ],
+					"patching_rect" : [ 50.0, 160.0, 150.0, 186.0 ],
 					"text" : "Lotka-Volterra equations\n\nYou define how many species, deviation of their population sizes over time, their predator-prey relationships, and conditions for starting over\n\nThe system loops, producing 14-bit CCs (0-16384) as population sizes"
 				}
 
@@ -6256,8 +7691,35 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"source" : [ "obj-11", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-28", 0 ],
+					"source" : [ "obj-11", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-11", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
-					"order" : 0,
 					"source" : [ "obj-13", 1 ]
 				}
 
@@ -6265,7 +7727,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
-					"order" : 1,
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -6273,7 +7734,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
-					"order" : 0,
 					"source" : [ "obj-13", 2 ]
 				}
 
@@ -6281,7 +7741,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
-					"order" : 0,
 					"source" : [ "obj-13", 3 ]
 				}
 
@@ -6295,33 +7754,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-21", 0 ],
-					"order" : 0,
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
-					"order" : 1,
-					"source" : [ "obj-13", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-27", 0 ],
-					"order" : 1,
-					"source" : [ "obj-13", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-30", 0 ],
-					"order" : 1,
-					"source" : [ "obj-13", 3 ]
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-21", 0 ]
 				}
 
 			}
@@ -6350,6 +7784,77 @@
 				"patchline" : 				{
 					"destination" : [ "obj-30", 1 ],
 					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"order" : 2,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"order" : 3,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"order" : 1,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"order" : 0,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 1 ],
+					"order" : 2,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 1 ],
+					"order" : 3,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 1 ],
+					"order" : 1,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 1 ],
+					"order" : 0,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
@@ -6384,7 +7889,7 @@
 
 			}
  ],
-		"originid" : "pat-126",
+		"originid" : "pat-6",
 		"parameters" : 		{
 			"obj-13" : [ "rnbo~[3]", "rnbo~[2]", 0 ],
 			"obj-14::obj-1" : [ "rnbo~", "rnbo~", 0 ],
@@ -6403,37 +7908,37 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "lvlfo.maxsnap",
+				"name" : "lvlfo-multispecies.maxsnap",
 				"bootpath" : "~/Documents/Max 9/Snapshots",
-				"patcherrelativepath" : "../../../../../Documents/Max 9/Snapshots",
+				"patcherrelativepath" : "../../../../Max 9/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "lvlfo_20250512.maxsnap",
+				"name" : "lvlfo.maxsnap",
 				"bootpath" : "~/Documents/Max 9/Snapshots",
-				"patcherrelativepath" : "../../../../../Documents/Max 9/Snapshots",
+				"patcherrelativepath" : "../../../../Max 9/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "multi-species_predator-prey_model_control.maxsnap",
 				"bootpath" : "~/Documents/Max 9/Snapshots",
-				"patcherrelativepath" : "../../../../../Documents/Max 9/Snapshots",
+				"patcherrelativepath" : "../../../../Max 9/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pan2.maxpat",
-				"bootpath" : "~/Library/Application Support/Cycling '74/Max 9/Examples/spatialization/panning/lib",
-				"patcherrelativepath" : "../../../../../Library/Application Support/Cycling '74/Max 9/Examples/spatialization/panning/lib",
+				"bootpath" : "~/AppData/Roaming/Cycling '74/Max 9/examples/spatialization/panning/lib",
+				"patcherrelativepath" : "../../../../../AppData/Roaming/Cycling '74/Max 9/examples/spatialization/panning/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "predator-prey_model_control.maxsnap",
 				"bootpath" : "~/Documents/Max 9/Snapshots",
-				"patcherrelativepath" : "../../../../../Documents/Max 9/Snapshots",
+				"patcherrelativepath" : "../../../../Max 9/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
