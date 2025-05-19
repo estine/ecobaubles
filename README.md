@@ -1,5 +1,5 @@
 
-# EcoBobbles
+# EcoBaubles
 ᵇᶦᵇᵇˡᵉ ᵇᵒᵇᵇˡᵉ
 
 Ecologically informed VST Plug-ins and M4L Devices for sound creation and manipulation. 
@@ -50,6 +50,7 @@ Extensions of Eli Stine's 2019 dissertation, [*Modeling Natural Systems in Immer
 - [ ] Amphedra (piezo electricity inspired parameters (?) generating plug-in) version in RNBO
 
 #### Modeling Natural Systems Series
+- [ ] Lotka-Volterra Oscillator
 - [ ] MurMini initial version in RNBO (granular synth with params. controlled by flock sim.)
 - [ ] Make a GUI front in JUCE for the SimpleGlitcher (just attach some knobs / faders to it)
 
@@ -67,11 +68,11 @@ Extensions of Eli Stine's 2019 dissertation, [*Modeling Natural Systems in Immer
 ## Timeline
 
 #### Phase I
-- [ ] Mockup EcoBobbles in Max, semi-conscious of RNBO~ limitations, target is RNBO~ without GUIs
+- [ ] Mockup EcoBaubles in Max, semi-conscious of RNBO~ limitations, target is RNBO~ without GUIs
 - [ ] Get functioning as VSTs using RNBO~, test within compositions
 
 #### Phase II
-- [ ] Explore mockup GUI design in JUCE 
+- [ ] Explore mockup GUI design in JUCE/PGM/Other
 - [ ] Create full-fledged, custom GUI versions in JUCE, based off of RNBO~
 
 #### Phase III
